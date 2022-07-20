@@ -1,5 +1,5 @@
 import React from 'react'
-import * as s from "./styled-CardPokemon"
+import * as s from "./styled-CardPokedex"
 
 export default function CardPokemon(props) {
   // console.log(props.tipos);
@@ -27,7 +27,7 @@ export default function CardPokemon(props) {
 
       <s.LadoDireito>
         <s.Imagem src={props.foto} alt={props.nome} />
-        <s.BotaoCapturar onClick={() => props.atualizarCapturados(props.nome, props.id, props.tipos, props.foto)}>Capturar!</s.BotaoCapturar>
+        <s.BotaoExcluir onClick={() => props.atualizarCapturados(props.nome, props.id, props.tipos, props.foto)}>Excluir</s.BotaoExcluir>
       </s.LadoDireito>
     </s.Card>
   )
