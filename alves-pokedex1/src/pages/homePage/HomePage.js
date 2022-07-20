@@ -52,11 +52,20 @@ export default function HomePage() {
   // })
 
   const atualizarCapturados = (nome, id, tipos, foto) => {
+
     const novoPokemon = { nome, id, tipos, foto }
     const novaListaCapturados = [...listaCapturados, novoPokemon]
     setListaCapturados(novaListaCapturados)
-    console.log(`nova lista`, listaCapturados)
+    atualizarList(nome)
   }
+
+  const atualizarList = (nome) => {
+    const novaList = list.filter((pokemon) => {
+      return pokemon.name !== nome
+    })
+    setList(novaList)
+  }
+  console.log(list)
 
   return (
     <s.Geral>
@@ -69,7 +78,7 @@ export default function HomePage() {
         {
           listaDetalhes.map(pokemon => {
             return (
-              <Card
+              <Card key={pokemon.id}
                 id={pokemon.id}
                 nome={pokemon.name}
                 foto={pokemon.sprites.other.dream_world.front_default}

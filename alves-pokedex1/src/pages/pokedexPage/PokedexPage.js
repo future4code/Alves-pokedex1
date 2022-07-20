@@ -6,10 +6,17 @@ import img_titulo from './../../assets/img/titulo.png';
 import { GlobalContext } from "../../components/global/GlobalContext";
 import { useContext } from 'react';
 import Card from './../../components/cardPokedex/CardPokedex';
+
 export default function PokedexPage() {
   const { listaCapturados, setListaCapturados } = useContext(GlobalContext);
   const navigate = useNavigate();
 
+  const excluirPokemon = (id) => {
+    const novaLista = listaCapturados.filter((pokemon) => {
+      return pokemon.id !== id
+    })
+    setListaCapturados(novaLista)
+  }
 
   return (
     <s.Geral>
@@ -23,12 +30,13 @@ export default function PokedexPage() {
         {
           listaCapturados.map(pokemon => {
             return (
-              <Card
+              <Card key={pokemon.id}
                 id={pokemon.id}
                 nome={pokemon.nome}
                 foto={pokemon.foto}
                 tipos={pokemon.tipos}
-                // atualizarCapturados={atualizarCapturados}
+                excluirPokemon={excluirPokemon}
+              // atualizarCapturados={atualizarCapturados}
               />
             )
           })
