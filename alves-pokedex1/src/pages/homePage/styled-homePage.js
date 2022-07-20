@@ -34,7 +34,7 @@ export const BotaoPokedex = styled.div`
   width: 287px;
   height: 74px;
   /* left: 1112px; */
-  left: 1412px;
+  left: 1112px;
   top: 41px;
   background: #33A4F5;
   border-radius: 8px;
