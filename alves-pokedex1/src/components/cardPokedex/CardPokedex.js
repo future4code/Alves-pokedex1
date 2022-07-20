@@ -11,12 +11,11 @@ export default function CardPokemon(props) {
         <s.Nome>{props.nome}</s.Nome>
         <s.Tipos>
           {
-            props.tipos.map((a, i) => {
-              const teste = a.type.name;
-              // console.log(teste)
+            props.tipos.map((pokemon, index) => {
+              const tipoPokemon = pokemon.type.name;
               return (
-                <s.Tipoi>
-                  {teste}
+                <s.Tipoi key={index}>
+                  {tipoPokemon}
                 </s.Tipoi>
               )
             })
@@ -27,7 +26,7 @@ export default function CardPokemon(props) {
 
       <s.LadoDireito>
         <s.Imagem src={props.foto} alt={props.nome} />
-        <s.BotaoExcluir onClick={() => props.atualizarCapturados(props.nome, props.id, props.tipos, props.foto)}>Excluir</s.BotaoExcluir>
+        <s.BotaoExcluir onClick={() => props.excluirPokemon(props.id)}>Excluir</s.BotaoExcluir>
       </s.LadoDireito>
     </s.Card>
   )

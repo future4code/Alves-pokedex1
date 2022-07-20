@@ -11,13 +11,12 @@ export default function CardPokemon(props) {
         <s.Nome>{props.nome}</s.Nome>
         <s.Tipos>
           {
-            props.tipos.map((a, i) => {
-              const teste = a.type.name;
-              // console.log(teste)
+            props.tipos.map((pokemon, index) => {
+              const tipoPokemon = pokemon.type.name;
               return (
-                <s.Tipoi>
-                  {teste}
-                </s.Tipoi>
+                <s.Tipoi key={index}>
+                  {tipoPokemon}
+                </s.Tipoi >
               )
             })
           }
