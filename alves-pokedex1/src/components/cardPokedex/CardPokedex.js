@@ -1,8 +1,11 @@
 import React from 'react'
 import * as s from "./styled-CardPokedex"
+import { useNavigate } from "react-router-dom";
+import { goDetailsPage } from "./../../routes/coordinator.js";
+
 
 export default function CardPokemon(props) {
-  // console.log(props.tipos);
+  const navigate = useNavigate();
 
   return (
     <s.Card>
@@ -21,7 +24,8 @@ export default function CardPokemon(props) {
             })
           }
         </s.Tipos>
-        <s.BotaoDetalhes>Detalhes</s.BotaoDetalhes>
+        <s.BotaoDetalhes onClick={()=>goDetailsPage(navigate, props.id)} >Detalhes</s.BotaoDetalhes>
+        
       </s.LadoEsquerdo>
 
       <s.LadoDireito>

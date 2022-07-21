@@ -3,17 +3,14 @@ import React, { useState } from "react";
 import { GlobalContext } from "../global/GlobalContext";
 
 export default function GlobalState(props) {
-    // const [cart, setCart] = useState([]);
     const [listaCapturados, setListaCapturados] = useState([])
+    const [listaDetalhes, setListaDetalhes] = useState([]);
 
-    // const values = {
-    //     cart,
-    //     setCart,
-    //     productsList
-    // };
     const values = {
         listaCapturados,
-        setListaCapturados
+        listaDetalhes,
+        setListaCapturados,
+        setListaDetalhes
     }
 
     const Provider = GlobalContext.Provider;
