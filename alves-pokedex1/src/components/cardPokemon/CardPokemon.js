@@ -2,7 +2,6 @@ import React from 'react'
 import * as s from "./styled-CardPokemon"
 
 export default function CardPokemon(props) {
-  // console.log(props.tipos);
 
   return (
     <s.Card>

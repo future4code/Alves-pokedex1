@@ -16,7 +16,7 @@ export default function HomePage() {
   const [listaDetalhes, setListaDetalhes] = useState([]);
   // const [listaCapturados, setListaCapturados] = useState([])
 
-  const listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
+  let listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
 
   const getPokemons = () => {
     axios
@@ -49,20 +49,21 @@ export default function HomePage() {
   }, [list])
 
   const atualizarCapturados = (nome, id, tipos, foto) => {
-
-    const novoPokemon = { nome, id, tipos, foto }
-    const novaListaCapturados = [...listaCapturados, novoPokemon]
-    setListaCapturados(novaListaCapturados)
-    atualizarList(nome)
-
-    localStorage.setItem('listaCapturados', JSON.stringify(novaListaCapturados))
-  }
-
-  const atualizarList = (nome) => {
-    const novaList = list.filter((pokemon) => {
-      return pokemon.name !== nome
-    })
-    setList(novaList)
+    listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
+    if (listaLS !== null){
+      const novoPokemon = { nome, id, tipos, foto }
+      const novaListaCapturados = [...listaLS, novoPokemon]
+      setListaCapturados(novaListaCapturados)
+  
+      localStorage.setItem('listaCapturados', JSON.stringify(novaListaCapturados))
+    }
+    else {
+      const novoPokemon = { nome, id, tipos, foto }
+      const novaListaCapturados = [novoPokemon]
+      setListaCapturados(novaListaCapturados)
+  
+      localStorage.setItem('listaCapturados', JSON.stringify(novaListaCapturados))
+    }
   }
 
   const listaDetalhes2 = [];
@@ -72,9 +73,9 @@ export default function HomePage() {
       for(let j=0 ; j<listaLS.length ; j++){
         if(listaDetalhes[i].name === listaLS[j].nome) repetido = true;
       }
+      if(repetido === false) listaDetalhes2.push(listaDetalhes[i])
       if(!repetido) listaDetalhes2.push(listaDetalhes[i])
     }
-    console.log(listaDetalhes2)
   }
 
   return (
