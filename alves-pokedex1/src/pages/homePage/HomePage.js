@@ -16,6 +16,8 @@ export default function HomePage() {
   const [listaDetalhes, setListaDetalhes] = useState([]);
   // const [listaCapturados, setListaCapturados] = useState([])
 
+  const listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
+
   const getPokemons = () => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/`)
@@ -35,7 +37,7 @@ export default function HomePage() {
         .get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
         .then(res => {
           detalhesPokemon.push(res.data);
-          if (detalhesPokemon.length === 20) setListaDetalhes(detalhesPokemon);
+          if (detalhesPokemon.length === list.length) setListaDetalhes(detalhesPokemon);
         })
         .catch(error => {
           alert("Deu errado a requisição de pegar pokemons!");
@@ -46,17 +48,14 @@ export default function HomePage() {
     getDetalhesPokemon();
   }, [list])
 
-  // listaDetalhes.forEach((item, index) => {
-  // console.log('Id =', item.id, '| Nome =', item.name, '| Foto =', item.sprites.front_default, '| Tipo =', item.types[0].type.name)
-  // console.log('----------------')
-  // })
-
   const atualizarCapturados = (nome, id, tipos, foto) => {
 
     const novoPokemon = { nome, id, tipos, foto }
     const novaListaCapturados = [...listaCapturados, novoPokemon]
     setListaCapturados(novaListaCapturados)
     atualizarList(nome)
+
+    localStorage.setItem('listaCapturados', JSON.stringify(novaListaCapturados))
   }
 
   const atualizarList = (nome) => {
@@ -65,7 +64,18 @@ export default function HomePage() {
     })
     setList(novaList)
   }
-  console.log(list)
+
+  const listaDetalhes2 = [];
+  if(listaLS !== null){
+    for(let i=0 ; i<listaDetalhes.length ; i++){
+      let repetido = false;
+      for(let j=0 ; j<listaLS.length ; j++){
+        if(listaDetalhes[i].name === listaLS[j].nome) repetido = true;
+      }
+      if(!repetido) listaDetalhes2.push(listaDetalhes[i])
+    }
+    console.log(listaDetalhes2)
+  }
 
   return (
     <s.Geral>
@@ -76,17 +86,38 @@ export default function HomePage() {
 
       <s.Main>
         {
-          listaDetalhes.map(pokemon => {
-            return (
-              <Card key={pokemon.id}
-                id={pokemon.id}
-                nome={pokemon.name}
-                foto={pokemon.sprites.other.dream_world.front_default}
-                tipos={pokemon.types}
-                atualizarCapturados={atualizarCapturados}
-              />
-            )
-          })
+          listaLS === null ? 
+            listaDetalhes
+            .sort( (atual, proximo) => {
+              return (atual.id - proximo.id)
+            })
+            .map(pokemon => {
+              return (
+                <Card key={pokemon.id}
+                  id={pokemon.id}
+                  nome={pokemon.name}
+                  foto={pokemon.sprites.other.dream_world.front_default}
+                  tipos={pokemon.types}
+                  atualizarCapturados={atualizarCapturados}
+                />
+              )
+            })
+            :
+            listaDetalhes2
+            .sort( (atual, proximo) => {
+              return (atual.id - proximo.id)
+            })            
+            .map(pokemon => {
+              return (
+                <Card key={pokemon.id}
+                  id={pokemon.id}
+                  nome={pokemon.name}
+                  foto={pokemon.sprites.other.dream_world.front_default}
+                  tipos={pokemon.types}
+                  atualizarCapturados={atualizarCapturados}
+                />
+              )
+            })
         }
       </s.Main>
 

@@ -4,18 +4,29 @@ import { goToHomePage } from "./../../routes/coordinator.js";
 import img_titulo from './../../assets/img/titulo.png';
 // import img_seta from './../../assets/img/seta_esquerda.png';
 import { GlobalContext } from "../../components/global/GlobalContext";
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import Card from './../../components/cardPokedex/CardPokedex';
 
 export default function PokedexPage() {
-  const { listaCapturados, setListaCapturados } = useContext(GlobalContext);
+  const { setListaCapturados } = useContext(GlobalContext);
   const navigate = useNavigate();
 
+  // const excluirPokemon = (id) => {
+  //   const novaLista = listaCapturados.filter((pokemon) => {
+  //     return pokemon.id !== id
+  //   })
+  //   setListaCapturados(novaLista)
+  // }
+
+  let listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
   const excluirPokemon = (id) => {
-    const novaLista = listaCapturados.filter((pokemon) => {
+    // let listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
+    const novaLista = listaLS.filter((pokemon) => {
       return pokemon.id !== id
     })
     setListaCapturados(novaLista)
+    localStorage.setItem('listaCapturados', JSON.stringify(novaLista))
+    listaLS = novaLista;
   }
 
   return (
@@ -28,7 +39,8 @@ export default function PokedexPage() {
 
       <s.Main>
         {
-          listaCapturados.map(pokemon => {
+          // listaCapturados.map(pokemon => {
+          listaLS && listaLS.map(pokemon => {
             return (
               <Card key={pokemon.id}
                 id={pokemon.id}
