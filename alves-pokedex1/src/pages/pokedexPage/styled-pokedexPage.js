@@ -6,15 +6,18 @@ export const Geral = styled.div`
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
-`
+  `
 
 export const Header = styled.div`
   display: flex;
   background-color: white;
-`
+  `
 
 export const Main = styled.div`
-  background-color: lightgray;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #5E5E5E;
 `
 
 export const ImagemTitulo = styled.img`
@@ -43,7 +46,6 @@ export const BotaoHome = styled.div`
   height: 36px;
   left: 100px;
   top: 62px;
-
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;

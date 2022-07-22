@@ -18,7 +18,7 @@ export const Card = styled.div`
     align-items: center;
     width: 100%;
   }
-`
+  `
 
 export const Imagem = styled.img`
   width: 150px;
