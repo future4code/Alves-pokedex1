@@ -12,13 +12,21 @@ export default function HomePage() {
   const { listaDetalhes, setListaDetalhes } = useContext(GlobalContext);
   const navigate = useNavigate();
   const [list, setList] = useState([]);
+  const [list2, setList2] = useState([]);
   // const [listaDetalhes, setListaDetalhes] = useState([]);
   // const [listaCapturados, setListaCapturados] = useState([])
+  const [paginaAtual, setPaginaAtual] = useState(1);
+
   let listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
+
+  let pages = Math.ceil(1154 / 20);  //VER O VALOR DE 1154 ------------------------------
+  const mudaPaginaAtual = (pagina) => {
+    setPaginaAtual(pagina);
+  }
 
   const getPokemons = () => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/`)
+      .get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1154`)
       .then(res => {
         setList(res.data.results);
       })
@@ -28,26 +36,50 @@ export default function HomePage() {
     getPokemons();
   }, [])
 
+  const atualizarVariavelList = () => {
+    listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
+    const auxiliar = [];
+    if (listaLS !== null) {
+      for (let i = 0; i < list.length; i++) {
+        let repetido = false;
+        for (let j = 0; j < listaLS.length; j++) {
+          if (list[i].name === listaLS[j].nome) repetido = true;
+        }
+        if (!repetido) auxiliar.push(list[i])
+      }
+      setList2(auxiliar)
+    }
+  }
+  useEffect(() => {
+    atualizarVariavelList();
+  }, [listaCapturados])
+
   const getDetalhesPokemon = () => {
-    let detalhesPokemon = [];
-    list.forEach(pokemon => {
-      axios
-        .get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
-        .then(res => {
-          detalhesPokemon.push(res.data);
-          if (detalhesPokemon.length === list.length) {
-            setListaDetalhes(detalhesPokemon);
-            // console.log(detalhesPokemon)
-          }
-        })
-        .catch(error => {
-          alert("Deu errado a requisição de pegar pokemons!");
-        })
-    })
+    // if(list.length !== 0){
+      let detalhesPokemon = [];
+      const inicio = (paginaAtual - 1) * 20;
+      const fim = inicio + 20;
+      let listaRes = list2.length !== 0 ? list2 : list
+      listaRes = listaRes.slice(inicio, fim)
+      listaRes.forEach(pokemon => {
+        axios
+          .get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
+          .then(res => {
+            detalhesPokemon.push(res.data);
+            if (detalhesPokemon.length === 20) {
+              setListaDetalhes(detalhesPokemon);
+
+            }
+          })
+          .catch(error => {
+            alert("Deu errado a requisição de pegar pokemons!");
+          })
+      })
+    // }
   }
   useEffect(() => {
     getDetalhesPokemon();
-  }, [list])
+  }, [list, list2, paginaAtual])
 
   const atualizarCapturados = (nome, id, tipos, foto) => {
     listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
@@ -55,28 +87,20 @@ export default function HomePage() {
       const novoPokemon = { nome, id, tipos, foto }
       const novaListaCapturados = [...listaLS, novoPokemon]
       setListaCapturados(novaListaCapturados)
-
       localStorage.setItem('listaCapturados', JSON.stringify(novaListaCapturados))
     }
     else {
       const novoPokemon = { nome, id, tipos, foto }
       const novaListaCapturados = [novoPokemon]
       setListaCapturados(novaListaCapturados)
-
       localStorage.setItem('listaCapturados', JSON.stringify(novaListaCapturados))
     }
   }
 
-  const listaDetalhes2 = [];
-  if (listaLS !== null) {
-    for (let i = 0; i < listaDetalhes.length; i++) {
-      let repetido = false;
-      for (let j = 0; j < listaLS.length; j++) {
-        if (listaDetalhes[i].name === listaLS[j].nome) repetido = true;
-      }
-      if (!repetido) listaDetalhes2.push(listaDetalhes[i])
-    }
-  }
+  const MAX_ITEMS = 9;
+  const MAX_LEFT = (MAX_ITEMS - 1) / 2;
+  const PRIMEIRO = Math.max(paginaAtual - MAX_LEFT, 1)
+  // const ULTIMO = Math.min(paginaAtual + MAX_LEFT, pages)
 
   return (
     <s.Geral>
@@ -87,43 +111,31 @@ export default function HomePage() {
 
       <s.Main>
         {
-          listaLS === null ?
-            listaDetalhes
-              .sort((atual, proximo) => {
-                return (atual.id - proximo.id)
-              })
-              .map(pokemon => {
-                return (
-                  <Card 
-                    id={pokemon.id}
-                    nome={pokemon.name}
-                    foto={pokemon.sprites.other.dream_world.front_default}
-                    tipos={pokemon.types}
-                    movimentos={pokemon.moves}
-                    status={pokemon.stats}
-                    atualizarCapturados={atualizarCapturados}
-                  />
-                )
-              })
-            :
-            listaDetalhes2
-              .sort((atual, proximo) => {
-                return (atual.id - proximo.id)
-              })
-              .map(pokemon => {
-                return (
-                  <Card 
-                    id={pokemon.id}
-                    nome={pokemon.name}
-                    foto={pokemon.sprites.other.dream_world.front_default}
-                    tipos={pokemon.types}
-                    movimentos={pokemon.moves}
-                    status={pokemon.stats}
-                    atualizarCapturados={atualizarCapturados}
-                  />
-                )
-              })
+          listaDetalhes && listaDetalhes
+            .sort((atual, proximo) => {
+              return (atual.id - proximo.id)
+            })
+            .map(pokemon => {
+              return (
+                <Card 
+                  id={pokemon.id}
+                  nome={pokemon.name}
+                  foto={pokemon.sprites.other.dream_world.front_default}
+                  tipos={pokemon.types}
+                  movimentos={pokemon.moves}
+                  status={pokemon.stats}
+                  atualizarCapturados={atualizarCapturados}
+                />
+              )
+            })
         }
+        <div>
+          {
+            Array.from({length: MAX_ITEMS}, (_,i) => {
+              return <button value={i} onClick={()=>mudaPaginaAtual(i+PRIMEIRO)}>{i+PRIMEIRO}</button>
+            })
+          }
+        </div>
       </s.Main>
 
     </s.Geral>
