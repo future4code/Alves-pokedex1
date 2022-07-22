@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as s from './styled-Batalha';
 import img_titulo from './../../assets/img/titulo.png';
+import img_vs from './../../assets/img/vs.png';
 import { goToPokedexPage } from "./../../routes/coordinator.js";
 
 export default function Batalha() {
@@ -62,9 +63,9 @@ export default function Batalha() {
     somarAtributosP1();
     somarAtributosP2();
     if (statsP1 > statsP2) {
-      setMsgVencedor(`O pokemon ${pokemon1.nome} é o vencedor`);
+      setMsgVencedor(`O pokemon ${pokemon1.nome} é o vencedor!`);
     } else if (statsP1 < statsP2) {
-      setMsgVencedor(`O pokemon ${pokemon2.nome} é o vencedor`);
+      setMsgVencedor(`O pokemon ${pokemon2.nome} é o vencedor!`);
     } else {
       setMsgVencedor("Houve um empate!");
     }
@@ -122,8 +123,6 @@ export default function Batalha() {
             <>
               <s.Coluna1>
                 <s.Select
-                  // name={"idTrip"}
-                  // value={form.idTrip}
                   onChange={escolherPokemon1}
                 >
                   <option value="" selected disabled>Escolha um Pokémon</option>
@@ -145,7 +144,7 @@ export default function Batalha() {
                     null
                 }
                 {
-                  setarResultado ?
+                  setarResultado && pokemon1 ?
                     <>
                       <s.Resumo>
                         {resumoP1}
@@ -163,19 +162,31 @@ export default function Batalha() {
                     null
                 }
               </s.Coluna1>
+
               <s.Coluna2>
-                <s.BotaoLutar onClick={botaoLutar}>Lutar!!</s.BotaoLutar>
-                {
-                  setarResultado ?
-                    msgVencedor
+                <s.ParteDeCima>
+                  <s.VS src={img_vs} alt="versus"/>
+                </s.ParteDeCima>
+                <s.ParteDeBaixo>
+                  {
+                    pokemon1 && pokemon2 ? 
+                      <s.BotaoLutar onClick={botaoLutar}>Lutar!</s.BotaoLutar>
                     :
                     null
-                }
+                  }
+                  {
+                    setarResultado && pokemon1 && pokemon2 ?
+                      <s.Resultado>
+                        {msgVencedor}
+                      </s.Resultado>
+                      :
+                      null
+                  }
+                </s.ParteDeBaixo>
               </s.Coluna2>
+              
               <s.Coluna3>
                 <s.Select
-                  // name={"idTrip"}
-                  // value={form.idTrip}
                   onChange={escolherPokemon2}
                 >
                   <option value="" selected disabled>Escolha um Pokémon</option>
@@ -197,7 +208,7 @@ export default function Batalha() {
                     null
                 }
                 {
-                  setarResultado ?
+                  setarResultado && pokemon2?
                   <>
                   <s.Resumo>
                     {resumoP2}

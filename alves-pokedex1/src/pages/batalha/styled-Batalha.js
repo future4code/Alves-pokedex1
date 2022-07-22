@@ -18,21 +18,19 @@ export const Header = styled.div`
 export const LadoEsquerdo = styled.div`
   display: flex;
   flex-basis: 42%;
-  /* border: solid 2px red; */
 `
 
 export const LadoDireito = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-basis: 58%;
-  /* border: solid 2px blue; */
 `
 
 export const BotaoVoltar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 30px;
 
   width: 287px;
   height: 74px;
@@ -50,8 +48,6 @@ export const BotaoVoltar = styled.div`
 export const ImagemTitulo = styled.img`
   width: 307px;
   height: 113px;
-  /* left: 566px; */
-  /* top: 21px; */
 `
 
 export const Main = styled.div`
@@ -74,13 +70,64 @@ export const Coluna1 = styled.div`
 export const Coluna2 = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   border-radius: 20px;
   margin: 20px;
   width: 30%;
-  border: solid 2px red;
-  /* background-color: lightblue; */
+`
+
+export const ParteDeCima = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-basis: 50%;
+`
+
+export const VS = styled.img`
+  width: 400px;
+`
+
+export const ParteDeBaixo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-basis: 50%;
+`
+
+export const BotaoLutar = styled.button`
+  font-size: 22px;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  /* color: #ddd9ce; */
+  color: white;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+
+  /* padding-left: 10px; */
+  /* text-align: left; */
+  &:hover {
+    cursor: pointer;
+    background-color: #790000;
+    /* transform: scale(1.03); */
+    transition: .4s;
+    color: #ddd9ce;
+  }
+`
+
+export const Resultado = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  height: 100px;
+  width: 100%;
+  background-color: #baf1ba;
 `
 
 export const Coluna3 = styled.div`
@@ -94,9 +141,10 @@ export const Coluna3 = styled.div`
   background-color: lightcoral;
 `
 
+// ESTILIZAÇÃO DAS COLUNAS 1 E 3
 export const Select = styled.select`
   margin: 20px 0 20px 0;
-  height: 35px;
+  height: 40px;
   width: 90%;
   border: none;
   font-size: 18px;
@@ -115,22 +163,16 @@ export const TextoVazio = styled.h1`
   text-align: center;
 `
 
-export const BotaoLutar = styled.button`
-  width: 200px;
-  height: 50px;
-  text-align: center;
-`
-
 export const ContentImg = styled.div`
   margin: 20px 0 0 0;
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
 `
 
 export const Image = styled.img`
   max-width: 100%;
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -152,7 +194,6 @@ export const AtributosInfo = styled.div`
 export const Resumo = styled.div`
   margin: 20px;
   width: 60%;
-  /* border: solid 1px black; */
 `
 
 export const AtributoNome = styled.div`
@@ -169,11 +210,11 @@ export const Total = styled.div`
   align-items: center;
   font-size: 18px;
   border-radius: 10px;
-  height: 30px; 
+  height: 40px; 
   padding: 0 0 0 10px;
   margin: 10px 20px 5px 20px;
   border: none;
-  background: lightgrey;
+  background: #979797;
 `
 
 export const TotalTexto = styled.div`
