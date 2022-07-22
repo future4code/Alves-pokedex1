@@ -69,3 +69,19 @@ export const Grid = styled.div`
     margin: 0;
   }
 `
+
+export const BotaoPagina = styled.button`
+  background-color: ${props => props.value === props.paginaAtual ? "orange" : null};
+`
+
+export const BotaoAnterior = styled.button`
+  :disabled {
+    opacity: 0.8
+  };
+`
+
+export const BotaoUltimo = styled.button`
+  :disabled {
+    opacity: 0.8
+  };
+`
