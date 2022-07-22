@@ -2,6 +2,10 @@ export const goToPokedexPage = (navigate) => {
   navigate("/pokedex");
 }
 
+export const goToCriarBatalha = (navigate) => {
+  navigate("/batalha");
+}
+
 export const goToHomePage = (navigate) => {
   navigate("/");
 }

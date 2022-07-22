@@ -81,16 +81,16 @@ export default function HomePage() {
     getDetalhesPokemon();
   }, [list, list2, paginaAtual])
 
-  const atualizarCapturados = (nome, id, tipos, foto) => {
+  const atualizarCapturados = (nome, id, tipos, foto, stats) => {
     listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
     if (listaLS !== null) {
-      const novoPokemon = { nome, id, tipos, foto }
+      const novoPokemon = { nome, id, tipos, foto, stats }
       const novaListaCapturados = [...listaLS, novoPokemon]
       setListaCapturados(novaListaCapturados)
       localStorage.setItem('listaCapturados', JSON.stringify(novaListaCapturados))
     }
     else {
-      const novoPokemon = { nome, id, tipos, foto }
+      const novoPokemon = { nome, id, tipos, foto, stats }
       const novaListaCapturados = [novoPokemon]
       setListaCapturados(novaListaCapturados)
       localStorage.setItem('listaCapturados', JSON.stringify(novaListaCapturados))
@@ -122,7 +122,7 @@ export default function HomePage() {
                   foto={pokemon.sprites.other.dream_world.front_default}
                   tipos={pokemon.types}
                   movimentos={pokemon.moves}
-                  status={pokemon.stats}
+                  stats={pokemon.stats}
                   atualizarCapturados={atualizarCapturados}
                 />
               )

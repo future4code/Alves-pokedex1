@@ -8,16 +8,18 @@ export const Geral = styled.div`
   box-sizing: border-box;
 `
 
-export const Header = styled.div`
-  background-color: white;
-`
-
 export const Main = styled.div`
   background-color: lightgreen;
 `
 
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+`
+
 export const ImagemTitulo = styled.img`
-  position: absolute;
   width: 307px;
   height: 113px;
   left: 566px;
@@ -26,33 +28,20 @@ export const ImagemTitulo = styled.img`
 
 export const BotaoPokedex = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 4px 10px;
-  position: absolute;
+
   width: 287px;
   height: 74px;
-  /* left: 1112px; */
-  left: 1112px;
-  top: 41px;
   background: #33A4F5;
   border-radius: 8px;
-  /* Pokédex */
-  /* width: 106px;
-  height: 36px; */
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
   cursor: pointer;
-  /* identical to box height */
   color: #FFFFFF;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 `
 
 export const Grid = styled.div`

@@ -29,7 +29,7 @@ export default function CardPokemon(props) {
 
       <s.LadoDireito>
         <s.Imagem src={props.foto} alt={props.nome} />
-        <s.BotaoCapturar onClick={() => props.atualizarCapturados(props.nome, props.id, props.tipos, props.foto)}>Capturar!</s.BotaoCapturar>
+        <s.BotaoCapturar onClick={() => props.atualizarCapturados(props.nome, props.id, props.tipos, props.foto, props.stats)}>Capturar!</s.BotaoCapturar>
       </s.LadoDireito>
     </s.Card>
   )

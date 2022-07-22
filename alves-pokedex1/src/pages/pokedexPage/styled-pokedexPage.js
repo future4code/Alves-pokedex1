@@ -6,26 +6,18 @@ export const Geral = styled.div`
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
-  `
+`
 
 export const Header = styled.div`
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: white;
-  `
-
-export const Main = styled.div`
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: #5E5E5E;
 `
 
 export const ImagemTitulo = styled.img`
-  position: absolute;
   width: 307px;
   height: 113px;
-  left: 566px;
-  top: 21px;
 `
 
 export const ImagemSeta = styled.img`
@@ -35,27 +27,44 @@ export const ImagemSeta = styled.img`
   right: 37.54%;
   top: 20.83%;
   bottom: 20.83%;
-
   background: #000000;
 `
 
 export const BotaoHome = styled.div`
-  /* Todos Pokémons */
-  position: absolute;
   width: 210px;
   height: 36px;
-  left: 100px;
-  top: 62px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
-  /* identical to box height */
-  text-decoration-line: underline;
   color: #1A1A1A;
-
   cursor: pointer;
+`
+
+export const BotaoCriarBatalha = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 287px;
+  height: 74px;
+  background: #33A4F5;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+  color: #FFFFFF;
+`
+
+
+export const Main = styled.div`
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #5E5E5E;
 `
 
 export const Grid = styled.div`
