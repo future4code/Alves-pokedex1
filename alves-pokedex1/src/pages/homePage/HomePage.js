@@ -19,7 +19,7 @@ export default function HomePage() {
 
   let listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
 
-  let pages = Math.ceil(1154 / 20);  //VER O VALOR DE 1154 ------------------------------
+  let pages = Math.ceil(list2.length / 20);  //VER O VALOR DE 1154 ------------------------------
   const mudaPaginaAtual = (pagina) => {
     setPaginaAtual(pagina);
   }
@@ -52,10 +52,10 @@ export default function HomePage() {
   }
   useEffect(() => {
     atualizarVariavelList();
-  }, [listaCapturados])
+  }, [list, listaCapturados])
 
   const getDetalhesPokemon = () => {
-    // if(list.length !== 0){
+    if(list.length !== 0){
       let detalhesPokemon = [];
       const inicio = (paginaAtual - 1) * 20;
       const fim = inicio + 20;
@@ -75,7 +75,7 @@ export default function HomePage() {
             alert("Deu errado a requisição de pegar pokemons!");
           })
       })
-    // }
+    }
   }
   useEffect(() => {
     getDetalhesPokemon();
@@ -100,7 +100,6 @@ export default function HomePage() {
   const MAX_ITEMS = 9;
   const MAX_LEFT = (MAX_ITEMS - 1) / 2;
   const PRIMEIRO = Math.max(paginaAtual - MAX_LEFT, 1)
-  // const ULTIMO = Math.min(paginaAtual + MAX_LEFT, pages)
 
   return (
     <s.Geral>
@@ -130,11 +129,15 @@ export default function HomePage() {
             })
         }
         <div>
+          <s.BotaoAnterior disabled={paginaAtual === 1 ? true : false} onClick={()=>mudaPaginaAtual(paginaAtual-1)}>Anterior</s.BotaoAnterior>
           {
             Array.from({length: MAX_ITEMS}, (_,i) => {
-              return <button value={i} onClick={()=>mudaPaginaAtual(i+PRIMEIRO)}>{i+PRIMEIRO}</button>
+              return(
+                <s.BotaoPagina paginaAtual={paginaAtual} value={i+PRIMEIRO} onClick={()=>mudaPaginaAtual(i+PRIMEIRO)}>{i+PRIMEIRO}</s.BotaoPagina>
+              ) 
             })
           }
+          <s.BotaoUltimo disabled={paginaAtual === pages ? true : false} onClick={()=>mudaPaginaAtual(paginaAtual+1)}>Próximo</s.BotaoUltimo>
         </div>
       </s.Main>
 
