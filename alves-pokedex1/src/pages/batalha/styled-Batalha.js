@@ -26,28 +26,43 @@ export const LadoDireito = styled.div`
   flex-basis: 58%;
 `
 
-export const BotaoVoltar = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 0 30px;
-
-  width: 287px;
-  height: 74px;
-  background: #33A4F5;
-  border-radius: 8px;
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  cursor: pointer;
-  color: #FFFFFF;
-`
-
 export const ImagemTitulo = styled.img`
   width: 307px;
   height: 113px;
+`
+
+export const BotaoVoltar = styled.div`
+  display:flex;  
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 30px;
+  width: 287px;
+  height: 74px;
+  color:#fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size:1.4em;
+  text-align: center;
+  text-decoration:none;
+  border-radius:6px;
+  background-color:#33A4F5;
+  transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
+  background-size:contain;
+  background-position: -250px center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+
+:hover {
+  transform: scale(1.1);
+  background-position: -60px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+:active {
+  transform: scale(1);
+  background-position: 500px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
 `
 
 export const Main = styled.div`
@@ -64,7 +79,10 @@ export const Coluna1 = styled.div`
   margin: 20px;
   border-radius: 20px;
   width: 30%;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+
 `
 
 export const Coluna2 = styled.div`
@@ -127,7 +145,14 @@ export const Resultado = styled.div`
   font-size: 22px;
   height: 100px;
   width: 100%;
-  background-color: #baf1ba;
+  /* background-color: #baf1ba; */
+  border-radius: 10px;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  background-color: #fac705;
+  background-image: linear-gradient(90deg, #FF2525 0%, #21D4FD 80%);
+
+
 `
 
 export const Coluna3 = styled.div`
@@ -138,7 +163,11 @@ export const Coluna3 = styled.div`
   margin: 20px;
   border-radius: 20px;
   width: 30%;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+
+
 `
 
 // ESTILIZAÇÃO DAS COLUNAS 1 E 3
@@ -188,7 +217,8 @@ export const AtributosInfo = styled.div`
   height: 30px; 
   margin: 10px 20px 5px 20px;
   border: none;
-  background: orange;
+  color: #3d64b8;
+  background: #fac705;
 `
 
 export const Resumo = styled.div`
@@ -214,7 +244,8 @@ export const Total = styled.div`
   padding: 0 0 0 10px;
   margin: 10px 20px 5px 20px;
   border: none;
-  background: #979797;
+  color: #fac705;
+  background: #3d64b8;
 `
 
 export const TotalTexto = styled.div`

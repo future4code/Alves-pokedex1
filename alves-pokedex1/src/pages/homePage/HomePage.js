@@ -55,7 +55,7 @@ export default function HomePage() {
   }, [list, listaCapturados])
 
   const getDetalhesPokemon = () => {
-    if(list.length !== 0){
+    if (list.length !== 0) {
       let detalhesPokemon = [];
       const inicio = (paginaAtual - 1) * 20;
       const fim = inicio + 20;
@@ -104,8 +104,12 @@ export default function HomePage() {
   return (
     <s.Geral>
       <s.Header>
-        <s.ImagemTitulo src={img_titulo} alt={'Imagem de título'}></s.ImagemTitulo>
-        <s.BotaoPokedex onClick={() => goToPokedexPage(navigate)}>Pokédex</s.BotaoPokedex>
+        <s.LadoEsquerdo>
+          <s.BotaoPokedex onClick={() => goToPokedexPage(navigate)}>Pokédex</s.BotaoPokedex>
+        </s.LadoEsquerdo>
+        <s.LadoDireito>
+          <s.ImagemTitulo src={img_titulo} alt={'Imagem de título'}></s.ImagemTitulo>
+        </s.LadoDireito>
       </s.Header>
 
       <s.Main>
@@ -116,7 +120,7 @@ export default function HomePage() {
             })
             .map(pokemon => {
               return (
-                <Card 
+                <Card
                   id={pokemon.id}
                   nome={pokemon.name}
                   foto={pokemon.sprites.other.dream_world.front_default}
@@ -128,18 +132,18 @@ export default function HomePage() {
               )
             })
         }
-        <div>
-          <s.BotaoAnterior disabled={paginaAtual === 1 ? true : false} onClick={()=>mudaPaginaAtual(paginaAtual-1)}>Anterior</s.BotaoAnterior>
+      </s.Main>
+        <s.BotoesPaginacao>
+          <s.BotaoAnterior disabled={paginaAtual === 1 ? true : false} onClick={() => mudaPaginaAtual(paginaAtual - 1)}>Anterior</s.BotaoAnterior>
           {
-            Array.from({length: MAX_ITEMS}, (_,i) => {
-              return(
-                <s.BotaoPagina paginaAtual={paginaAtual} value={i+PRIMEIRO} onClick={()=>mudaPaginaAtual(i+PRIMEIRO)}>{i+PRIMEIRO}</s.BotaoPagina>
-              ) 
+            Array.from({ length: MAX_ITEMS }, (_, i) => {
+              return (
+                <s.BotaoPagina paginaAtual={paginaAtual} value={i + PRIMEIRO} onClick={() => mudaPaginaAtual(i + PRIMEIRO)}>{i + PRIMEIRO}</s.BotaoPagina>
+              )
             })
           }
-          <s.BotaoUltimo disabled={paginaAtual === pages ? true : false} onClick={()=>mudaPaginaAtual(paginaAtual+1)}>Próximo</s.BotaoUltimo>
-        </div>
-      </s.Main>
+          <s.BotaoUltimo disabled={paginaAtual === pages ? true : false} onClick={() => mudaPaginaAtual(paginaAtual + 1)}>Próximo</s.BotaoUltimo>
+        </s.BotoesPaginacao>
 
     </s.Geral>
   );

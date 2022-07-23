@@ -34,7 +34,7 @@ export default function PokedexPage() {
       <s.Header>
         <s.BotaoHome onClick={() => goToHomePage(navigate)}> Todos Pokémons</s.BotaoHome>
         <s.ImagemTitulo src={img_titulo} alt={'Imagem de título'}></s.ImagemTitulo>
-      <s.BotaoCriarBatalha onClick={() => goToCriarBatalha(navigate)}>Criar Batalha</s.BotaoCriarBatalha>
+        <s.BotaoCriarBatalha onClick={() => goToCriarBatalha(navigate)}>Criar Batalha</s.BotaoCriarBatalha>
       </s.Header>
 
       <s.Main>
