@@ -5,58 +5,55 @@ export const Geral = styled.div`
   grid-template-rows: 160px 1fr 50px;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   box-sizing: border-box;
-    /* @media screen and (max-device-width : 480px){
-    width: 100vw;
-    
-    } */
 `
 
 export const Main = styled.div`
-  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   background-color: #5E5E5E;
   justify-content: center; 
   @media screen and (max-device-width : 480px){
     width: 100vw;
-    }
+  }
 `
 
 export const Header = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   @media screen and (max-device-width : 480px){
     width: 100vw;
     flex-direction: column;
-    }
+  }
 `
 export const BotaoHome = styled.div`
-  width: 100px;
-  height: 54px;
+  width: 287px;
+  height: 74px;
+  margin: 0 0 0 30px;
   color: #FFFFFF;
    @media screen and (max-device-width : 480px){
     width: 80vw;
     display: none;
     } 
-  `
+`
+
 export const ImagemTitulo = styled.img`
   width: 307px;
   height: 113px;
   @media screen and (max-device-width : 480px){
     width: 70vw;
     height: 60px;
-    }
+  }
 `
 
 export const BotaoPokedex = styled.div`
   display:flex;  
   justify-content: center;
   align-items: center;
-  margin: 0 0 0 30px;
+  margin: 0 30px 0 0;
   width: 287px;
   height: 74px;
   color:#fff;
@@ -73,21 +70,20 @@ export const BotaoPokedex = styled.div`
   background-repeat: no-repeat;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
-
-:hover {
-  transform: scale(1.1);
-  background-position: -60px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-:active {
-  transform: scale(1);
-  background-position: 500px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-@media screen and (max-device-width : 480px){
+  :hover {
+    transform: scale(1.1);
+    background-position: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  :active {
+    transform: scale(1);
+    background-position: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  @media screen and (max-device-width : 480px){
     width: 150px;
     height: 30px;
-    } 
+  } 
 `
 
 export const Grid = styled.div`
@@ -104,14 +100,12 @@ export const Grid = styled.div`
     margin: 0;
     width: 98vw;
   }
-
 `
 
 export const Paginacao = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 `
 export const BotaoPagina = styled.button`
   background-color: ${props => props.value === props.paginaAtual ? "orange" : null};

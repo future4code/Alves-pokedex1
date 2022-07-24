@@ -113,9 +113,9 @@ export default function HomePage() {
             .sort((atual, proximo) => {
               return (atual.id - proximo.id)
             })
-            .map(pokemon => {
+            .map( (pokemon,index) => {
               return (
-                <Card
+                <Card key={index}
                   id={pokemon.id}
                   nome={pokemon.name}
                   foto={pokemon.sprites.other.dream_world.front_default}
@@ -128,7 +128,6 @@ export default function HomePage() {
             })
         }
       </s.Main>
-
 
       <Paginacao
         paginaAtual={paginaAtual}
