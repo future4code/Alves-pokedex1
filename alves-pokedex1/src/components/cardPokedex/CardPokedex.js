@@ -2,6 +2,7 @@ import React from 'react'
 import * as s from "./styled-CardPokedex"
 import { useNavigate } from "react-router-dom";
 import { goDetailsPage } from "./../../routes/coordinator.js";
+import { CorCardTipo } from '../corCardTipo/CorCardTipo';
 
 
 export default function CardPokemon(props) {
@@ -10,22 +11,19 @@ export default function CardPokemon(props) {
   return (
     <s.Card>
       <s.LadoEsquerdo>
-        <s.ID>{props.id}</s.ID>
-        <s.Nome>{props.nome}</s.Nome>
+
+        <s.ID>{props.id < 10 ? `#0${props.id}` : `#${props.id}`}</s.ID>
+        <s.Nome>{props.nome[0].toUpperCase() + props.nome.substr(1)}</s.Nome>
+
         <s.Tipos>
-          {
-            props.tipos.map((pokemon, index) => {
-              const tipoPokemon = pokemon.type.name;
-              return (
-                <s.Tipoi key={index}>
-                  {tipoPokemon}
-                </s.Tipoi>
-              )
-            })
-          }
+
+          <CorCardTipo
+            tipos={props.tipos}
+          />
+
         </s.Tipos>
-        <s.BotaoDetalhes onClick={()=>goDetailsPage(navigate, props.id)} >Detalhes</s.BotaoDetalhes>
-        
+        <s.BotaoDetalhes onClick={() => goDetailsPage(navigate, props.id)} >Detalhes</s.BotaoDetalhes>
+
       </s.LadoEsquerdo>
 
       <s.LadoDireito>

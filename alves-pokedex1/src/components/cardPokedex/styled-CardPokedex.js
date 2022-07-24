@@ -20,7 +20,6 @@ export const Card = styled.div`
     width: 100%;
   }
 `
-
 export const Imagem = styled.img`
   display: flex;
   flex-direction: column;
@@ -33,23 +32,33 @@ export const Imagem = styled.img`
 
 
 `
-
-
 export const ID = styled.div`
+line-height: 16px;
+font-family: sans-serif;
+color: rgba(255, 255, 255, 0.9);
+font-size: 16px;
+margin-left: 10px;
+font-style: normal;
+font-weight: 700;
+margin-top: 10px;
 `
 
 export const Nome = styled.div`
+line-height: 16px;
+font-family: sans-serif;
+color: rgba(255, 255, 255, 0.9);
+font-size: 32px;
+margin-left: 10px;
+font-style: normal;
+font-weight: 700;
 `
-
 export const Tipos = styled.div`
   display: flex;
 `
-
 export const Tipoi = styled.div`
   display: flex;
   margin: 20px;
 `
-
 export const BotaoExcluir = styled.div`
   display: flex;
   flex-direction: row;
@@ -58,7 +67,6 @@ export const BotaoExcluir = styled.div`
   align-items: center;
   padding: 4px 10px;
   width: 146px;
-  /* height: 38px; */
   background: #FF6262;
   border-radius: 8px;
   cursor: pointer;
@@ -73,23 +81,8 @@ export const BotaoExcluir = styled.div`
   background-position: 500px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-
 `
-
 export const BotaoDetalhes = styled.div`
-  /* display: flex;
-  justify-content: space-between;
-  margin: 10px;
-  width: 74px;
-  height: 24px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  text-decoration-line: underline;
-  color: #FFFFFF; */
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -97,7 +90,6 @@ export const BotaoDetalhes = styled.div`
   align-items: center;
   padding: 4px 10px;
   width: 146px;
-  /* height: 38px; */
   background: #62c3ff;
   border-radius: 8px;
   margin: 10px;
@@ -113,13 +105,12 @@ export const BotaoDetalhes = styled.div`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 `
-
 export const LadoEsquerdo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0;
 `
-
 export const LadoDireito = styled.div`
   display: flex;
   flex-direction: column;
