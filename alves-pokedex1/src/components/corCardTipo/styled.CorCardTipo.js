@@ -8,6 +8,11 @@ flex-direction: row;
 justify-content: space-between;
 margin: 10px;
 width: 200px;
+@media screen and (max-device-width : 480px){
+    margin: 5px;
+    flex-direction: column;
+    
+    } 
 `
 export const NomeTipo = styled.p`
 font-family: sans-serif;

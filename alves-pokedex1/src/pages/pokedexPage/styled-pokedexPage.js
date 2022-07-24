@@ -14,13 +14,11 @@ export const Header = styled.div`
   justify-content: space-around;
   align-items: center;
   background-color: white;
-
   `
 
 export const ImagemTitulo = styled.img`
   width: 307px;
   height: 113px;
-
   `
 
 export const BotaoHome = styled.div`
@@ -93,14 +91,11 @@ export const BotaoCriarBatalha = styled.div`
 
 export const Main = styled.div`
   box-sizing: border-box;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #5E5E5E;
   justify-content: center;
-  
   `
 
 export const Grid = styled.div`

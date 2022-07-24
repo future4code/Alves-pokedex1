@@ -4,9 +4,17 @@ export const Paginacao = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   background-color: #5E5E5E;
-  /* border: solid 2px red; */
+  @media screen and (max-device-width : 480px){
+    border: solid 2px violet;
+    width: 95vw;
+    height: 40px;
+    margin: 0;
+    align-items: center; 
+    } 
 `
+
 export const BotaoPagina = styled.button`
   font-size: 16px;
   width: 40px;
@@ -32,7 +40,11 @@ export const BotaoAnterior = styled.button`
   &:hover {
 		cursor: pointer;
 		background-color: #ffc964;
-	}  
+	}
+  @media screen and (max-device-width : 480px){
+    border: solid 2px red;
+    width: 100px;
+    }
 `
 
 export const BotaoUltimo = styled.button`
@@ -48,4 +60,8 @@ export const BotaoUltimo = styled.button`
 		cursor: pointer;
 		background-color: #ffc964;
 	}
+  @media screen and (max-device-width : 480px){
+    /* border: solid 2px red; */
+    /* width: 100px; */
+    }
 `
