@@ -40,7 +40,7 @@ export const Card = styled.div`
 `
 
 export const Imagem = styled.img`
-  margin-bottom: 10px; 
+  margin: 0 10px 10px 0; 
   max-width: 100%;
   width: 200px;
   height: 220px;
@@ -52,7 +52,6 @@ export const Imagem = styled.img`
     height: 200px
   }
 `
-
 
 export const ID = styled.div`
   line-height: 16px;
@@ -83,7 +82,6 @@ export const Nome = styled.div`
 
 export const Tipos = styled.div`
   display: flex;
-  
 `
 
 export const Tipoi = styled.div`

@@ -34,16 +34,16 @@ export const BotaoHome = styled.div`
   height: 74px;
   margin: 0 0 0 30px;
   color: #FFFFFF;
-   @media screen and (max-device-width : 480px){
+  @media screen and (max-device-width : 480px){
     width: 80vw;
     display: none;
-    } 
+  } 
 `
-
 export const ImagemTitulo = styled.img`
   width: 307px;
   height: 113px;
   @media screen and (max-device-width : 480px){
+    margin: 0;
     width: 70vw;
     height: 60px;
   }
@@ -65,9 +65,6 @@ export const BotaoPokedex = styled.div`
   border-radius:6px;
   background-color:#33A4F5;
   transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
-  background-size:contain;
-  background-position: -250px center;
-  background-repeat: no-repeat;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
   :hover {

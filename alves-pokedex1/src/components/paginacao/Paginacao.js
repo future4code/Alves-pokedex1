@@ -2,7 +2,7 @@ import * as s from './styled-Paginacao';
 
 export default function Paginacao(props) {
 
-  const MAX_ITEMS = 9;
+  const MAX_ITEMS = 7;
   const MAX_LEFT = (MAX_ITEMS - 1) / 2;
   const PRIMEIRO = Math.max(props.paginaAtual - MAX_LEFT, 1)
 
@@ -19,4 +19,4 @@ export default function Paginacao(props) {
       <s.BotaoUltimo disabled={props.paginaAtual === props.pages ? true : false} onClick={() => props.mudaPaginaAtual(props.paginaAtual + 1)}>Próximo</s.BotaoUltimo>
     </s.Paginacao>
   );
-}; 
+};
