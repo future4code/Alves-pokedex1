@@ -166,7 +166,7 @@ export default function Batalha() {
                 <s.ParteDeBaixo>
                   {
                     pokemon1 && pokemon2 ? 
-                      <s.BotaoLutar onClick={botaoLutar}>Batalhar!</s.BotaoLutar>
+                      <s.BotaoLutar onClick={botaoLutar}>Lutar!</s.BotaoLutar>
                     :
                     null
                   }

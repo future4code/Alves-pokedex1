@@ -34,7 +34,7 @@ export default function PokedexPage() {
           listaLS.length === 0 ?
             <s.MensagemVazio>
               <s.TextoVazio>
-                Sua lista de Pokémons está vazia!
+                Sua lista Pokédex está vazia!
               </s.TextoVazio>
             </s.MensagemVazio>
             :
@@ -46,7 +46,6 @@ export default function PokedexPage() {
                   foto={pokemon.foto}
                   tipos={pokemon.tipos}
                   excluirPokemon={excluirPokemon}
-                // atualizarCapturados={atualizarCapturados}
                 />
               )
             })

@@ -37,7 +37,7 @@ export const BotaoHome = styled.div`
   @media screen and (max-device-width : 480px){
     width: 80vw;
     display: none;
-  } 
+  }
 `
 export const ImagemTitulo = styled.img`
   width: 307px;

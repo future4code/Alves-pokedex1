@@ -10,18 +10,18 @@ export const MensagemVazio = styled.div`
 export const TextoVazio = styled.h1`
   text-align: center;
 `
+
 export const Geral = styled.div`
   display: grid;
   grid-template-rows: 160px 1fr;
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
-
-  `
+`
 
 export const Header = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   @media screen and (min-device-width : 320px) and (max-device-width : 480px){
@@ -30,7 +30,7 @@ export const Header = styled.div`
     justify-content: space-between;
     align-items: center;
   }
-  `
+`
 
 export const ImagemTitulo = styled.img`
   width: 307px;
@@ -39,7 +39,7 @@ export const ImagemTitulo = styled.img`
     width: 207px;
     height: 76x;
   }
-  `
+`
 
 export const BotaoHome = styled.div`
   width: 287px;
@@ -57,23 +57,19 @@ export const BotaoHome = styled.div`
   border-radius:6px;
   background-color:#33A4F5;
   transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
-  background-size:contain;
-  background-position: -250px center;
-  background-repeat: no-repeat;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
-
-:hover {
-  transform: scale(1.1);
-  background-position: -60px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-:active {
-  transform: scale(1);
-  background-position: 500px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+  :hover {
+    transform: scale(1.1);
+    background-position: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  :active {
+    transform: scale(1);
+    background-position: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
     margin: 10px 0 10px 0;
   }
 `
@@ -81,7 +77,8 @@ export const BotaoHome = styled.div`
 export const BotaoCriarBatalha = styled.div`
   width: 287px;
   height: 74px;
-  display:flex;  
+  display:flex;
+  margin: 0 30px 0 ;
   justify-content: center;
   color:#fff;
   font-family: 'Poppins', sans-serif;
@@ -93,23 +90,19 @@ export const BotaoCriarBatalha = styled.div`
   border-radius:6px;
   background-color:#33A4F5;
   transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
-  background-size:contain;
-  background-position: -250px center;
-  background-repeat: no-repeat;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
-
-:hover {
-  transform: scale(1.1);
-  background-position: -60px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-:active {
-  transform: scale(1);
-  background-position: 500px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+  :hover {
+    transform: scale(1.1);
+    background-position: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  :active {
+    transform: scale(1);
+    background-position: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
     margin: 10px 0 10px 0;
   }
 `
@@ -140,5 +133,4 @@ export const Grid = styled.div`
     margin: 0;
     width: 98vw;
   }
-  
 `
