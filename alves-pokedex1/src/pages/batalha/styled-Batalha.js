@@ -11,20 +11,26 @@ export const Geral = styled.div`
 
 export const Header = styled.div`
   display: flex;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
 `
+export const BotaoHome = styled.div`
+  width: 287px;
+  height: 74px;
+  color: #FFFFFF;
+  `
 
-export const LadoEsquerdo = styled.div`
-  display: flex;
-  flex-basis: 42%;
-`
+// export const LadoEsquerdo = styled.div`
+//   display: flex;
+//   flex-basis: 42%;
+// `
 
-export const LadoDireito = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-basis: 58%;
-`
+// export const LadoDireito = styled.div`
+//   display: flex;
+//   justify-content: flex-start;
+//   flex-basis: 58%;
+// `
 
 export const ImagemTitulo = styled.img`
   width: 307px;

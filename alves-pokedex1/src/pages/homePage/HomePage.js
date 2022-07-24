@@ -102,12 +102,9 @@ export default function HomePage() {
     <s.Geral>
 
       <s.Header>
-        <s.LadoEsquerdo>
-          <s.BotaoPokedex onClick={() => goToPokedexPage(navigate)}>Pokédex</s.BotaoPokedex>
-        </s.LadoEsquerdo>
-        <s.LadoDireito>
-          <s.ImagemTitulo src={img_titulo} alt={'Imagem de título'}></s.ImagemTitulo>
-        </s.LadoDireito>
+        <s.BotaoHome>Apenas ajudar nos espaços iguais</s.BotaoHome>
+        <s.ImagemTitulo src={img_titulo} alt={'Imagem de título'}></s.ImagemTitulo>
+        <s.BotaoPokedex onClick={() => goToPokedexPage(navigate)}>Pokédex</s.BotaoPokedex>
       </s.Header>
 
       <s.Main>
@@ -132,11 +129,11 @@ export default function HomePage() {
         }
       </s.Main>
 
-      
-      <Paginacao 
-          paginaAtual={paginaAtual}
-          mudaPaginaAtual={mudaPaginaAtual}
-          pages={pages}
+
+      <Paginacao
+        paginaAtual={paginaAtual}
+        mudaPaginaAtual={mudaPaginaAtual}
+        pages={pages}
       />
 
     </s.Geral>

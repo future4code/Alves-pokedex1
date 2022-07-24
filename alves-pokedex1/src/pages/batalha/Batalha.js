@@ -108,13 +108,9 @@ export default function Batalha() {
   return (
     <s.Geral>
       <s.Header>
-        <s.LadoEsquerdo>
           <s.BotaoVoltar onClick={() => goToPokedexPage(navigate)}>Voltar</s.BotaoVoltar>
-        </s.LadoEsquerdo>
-
-        <s.LadoDireito>
           <s.ImagemTitulo src={img_titulo} alt={'Imagem de título'}></s.ImagemTitulo>
-        </s.LadoDireito>
+          <s.BotaoHome>Apenas ajudar nos espaços iguais</s.BotaoHome>
       </s.Header>
 
       <s.Main>

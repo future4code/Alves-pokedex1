@@ -6,6 +6,10 @@ export const Geral = styled.div`
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
+    /* @media screen and (max-device-width : 480px){
+    width: 100vw;
+    
+    } */
 `
 
 export const Main = styled.div`
@@ -14,30 +18,38 @@ export const Main = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #5E5E5E;
-  justify-content: center;
+  justify-content: center; 
+  @media screen and (max-device-width : 480px){
+    width: 100vw;
+    }
 `
 
 export const Header = styled.div`
   display: flex;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
+  @media screen and (max-device-width : 480px){
+    width: 100vw;
+    flex-direction: column;
+    }
 `
-export const LadoEsquerdo = styled.div`
-  display: flex;
-  flex-basis: 42%;
-  /* justify-content: space-around; */
-  /* border: solid orange; */
-`
-
-export const LadoDireito = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-basis: 58%;
-`
-
+export const BotaoHome = styled.div`
+  width: 100px;
+  height: 54px;
+  color: #FFFFFF;
+   @media screen and (max-device-width : 480px){
+    width: 80vw;
+    display: none;
+    } 
+  `
 export const ImagemTitulo = styled.img`
   width: 307px;
   height: 113px;
+  @media screen and (max-device-width : 480px){
+    width: 70vw;
+    height: 60px;
+    }
 `
 
 export const BotaoPokedex = styled.div`
@@ -72,6 +84,10 @@ export const BotaoPokedex = styled.div`
   background-position: 500px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+@media screen and (max-device-width : 480px){
+    width: 150px;
+    height: 30px;
+    } 
 `
 
 export const Grid = styled.div`
@@ -86,7 +102,9 @@ export const Grid = styled.div`
     grid-template-columns: 1fr;
     row-gap: 0;
     margin: 0;
+    width: 98vw;
   }
+
 `
 
 export const Paginacao = styled.div`
