@@ -22,21 +22,35 @@ export const Card = styled.div`
   `
 
 export const Imagem = styled.img`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 193px;
-  max-width: 200px;
-  left: 274px;
-  top: 295px;
-  margin-bottom: 10px;
-` 
+  margin-bottom: 10px; 
+  max-width: 100%;
+  width: 200px;
+  height: 220px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+`
 
 
 export const ID = styled.div`
+line-height: 16px;
+font-family: sans-serif;
+color: rgba(255, 255, 255, 0.9);
+font-size: 16px;
+margin-left: 10px;
+font-style: normal;
+font-weight: 700;
+margin-top: 10px;
 `
 
 export const Nome = styled.div`
+line-height: 16px;
+font-family: sans-serif;
+color: rgba(255, 255, 255, 0.9);
+font-size: 32px;
+margin-left: 10px;
+font-style: normal;
+font-weight: 700;
 `
 
 export const Tipos = styled.div`
@@ -47,6 +61,7 @@ export const Tipos = styled.div`
 export const Tipoi = styled.div`
   display: flex;
   margin: 20px;
+  border: solid 1px black;
 
 `
 
@@ -58,7 +73,6 @@ display: flex;
   align-items: center;
   padding: 4px 10px;
   width: 146px;
-  /* height: 38px; */
   background: #FF6262;
   border-radius: 8px;
   cursor: pointer;
@@ -83,7 +97,6 @@ export const BotaoDetalhes = styled.div`
   align-items: center;
   padding: 4px 10px;
   width: 146px;
-  /* height: 38px; */
   background: #62c3ff;
   border-radius: 8px;
   margin: 10px;
