@@ -6,18 +6,17 @@ import { CorCardTipo } from '../corCardTipo/CorCardTipo';
 
 export default function CardPokemon(props) {
   const navigate = useNavigate();
+  console.log(props.tipos[0].type.name)
 
   return (
-    <s.Card>
+    <s.Card tipo={props.tipos[0].type.name}>
       <s.LadoEsquerdo>
         <s.ID>{props.id < 10 ? `#0${props.id}` : `#${props.id}`}</s.ID>
         <s.Nome>{props.nome[0].toUpperCase() + props.nome.substr(1)}</s.Nome>
         <s.Tipos>
-
           <CorCardTipo
             tipos={props.tipos}
           />
-          
         </s.Tipos>
         <s.BotaoDetalhes onClick={() => goDetailsPage(navigate, props.id)} >Detalhes</s.BotaoDetalhes>
       </s.LadoEsquerdo>
