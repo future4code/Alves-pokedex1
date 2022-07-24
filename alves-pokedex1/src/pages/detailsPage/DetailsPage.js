@@ -23,6 +23,7 @@ export default function DetailsPage() {
         alert("Deu errado a requisição de pegar pokemons!");
       })
   }
+  
   useEffect(() => {
     getDetalhesPokemon();
   }, [])

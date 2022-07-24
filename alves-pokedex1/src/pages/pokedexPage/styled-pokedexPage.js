@@ -10,6 +10,7 @@ export const MensagemVazio = styled.div`
 export const TextoVazio = styled.h1`
   text-align: center;
 `
+
 export const Geral = styled.div`
   display: grid;
   grid-template-rows: 160px 1fr;

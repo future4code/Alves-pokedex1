@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-// import useRequestData from "../../hooks/useRequestData";
+import React, { useState } from "react"; 
 import { GlobalContext } from "../global/GlobalContext";
 
 export default function GlobalState(props) {

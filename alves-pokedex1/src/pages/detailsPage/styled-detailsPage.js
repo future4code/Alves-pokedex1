@@ -59,6 +59,7 @@ export const Header = styled.div`
     align-items: center;
   }
 `
+
 export const ImagemTitulo = styled.img`
   width: 307px;
   height: 113px;

@@ -46,7 +46,6 @@ export default function PokedexPage() {
                   foto={pokemon.foto}
                   tipos={pokemon.tipos}
                   excluirPokemon={excluirPokemon}
-                // atualizarCapturados={atualizarCapturados}
                 />
               )
             })

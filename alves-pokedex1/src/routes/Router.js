@@ -14,7 +14,6 @@ export const Router = () => {
         <Route path="details/:id" element={<Details/>}/>
         <Route path="batalha" element={<Batalha/>}/>
         <Route path="*" element={<ErrorPage/>}/>
-        {/* <Route path="*" element={<ErrorPage/>}/> */}
       </Routes>
     </BrowserRouter>
   )
