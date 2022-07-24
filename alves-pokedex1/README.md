@@ -6,12 +6,11 @@ https://pokedex-alves1.surge.sh
 
 
 # `Descrição`
-O Projeto Pokédex foi desenvolvido como uma atividade dentro do curso Full-Stack Web Developer da Labenu, o qual consiste em requisições (via axios) para a PokéApi, que é uma API pública* com informações relacionadas ao Pokémons.
-Trata-se de uma ferramenta onde o usuário pode verificar os detalhes de todos os Pokémons, adicionar os mesmo a sua Pokédex e também criar batalhas entre Pokémons, para ver
-qual é o vencedor da batalha.
+O Projeto Pokédex foi desenvolvido como uma atividade dentro do curso Full-Stack Web Developer da Labenu, o qual consiste em requisições (via axios) para a PokéApi, que é uma API pública* com informações relacionadas aos Pokémons.
+Trata-se de uma ferramenta onde o usuário pode verificar os detalhes de todos os Pokémons, adicionar os mesmos a sua Pokédex e também criar batalhas entre Pokémons para ver qual é o vencedor.
 *a API pode ser encontrada [aqui](https://pokeapi.co/)
 </br>
-[Acessar repositório no GitHub](https://github.com/future4code/Alves-pokedex1)
+O repositório do projeto pode ser encontrado [aqui](https://github.com/future4code/Alves-pokedex1)
 
 # `Modo de usar`
 Ao iniciar a ferramenta o usuário pode ver uma lista com vinte cards de Pokémons, e, na parte inferior da lista existe uma paginação, onde o usuário pode clicar em outras páginas para carregar mais Pokémons. Nestes cards, o usuário pode clicar em "Detalhes" ou em "Capturar!".
@@ -22,7 +21,7 @@ Caso o usuário, no card, clicar em "Capturar!", este Pokémon automaticamente s
 </br>
 No canto superior direito da tela, existe uma botão chamado "Pokédex". Ao clicar neste o usuário é redirecionado para a página onde estão os cards de todos aqueles adicionados à Pokédex.
 </br>
-No canto superior direito da página Pokédex existe um botão chamado "Criar Batalha". Ao clicar neste botão o usuário é redirecionado para uma página onde ele pode selecionar dois Pokémons. As opções que aparecem nesta seleção são apenas os Pokémons que já estão adicionados à Pokédex. Ao selecionar os Pokémons, suas imagens são exibidas abaixo do nome e também um botão chamado "Batalhar!", que, ao ser clicado exibe na tela os valores de "Base stats" de cada Pokémon, assim como a soma total destas. O Pokémon vencedor é aquele que possuir o maior valor total e uma mensagem na tela informa quem o é.
+No canto superior direito da página Pokédex existe um botão chamado "Criar Batalha". Ao clicar neste botão o usuário é redirecionado para uma página onde ele pode selecionar dois Pokémons. As opções que aparecem nesta seleção são apenas os Pokémons que já estão adicionados à Pokédex. Ao selecionar os Pokémons, suas imagens são exibidas abaixo do nome e também um botão chamado "Lutar!", que, ao ser clicado exibe na tela os valores de "Base stats" de cada Pokémon, assim como a soma total destes. O Pokémon vencedor é aquele que possuir o maior valor total e uma mensagem na tela informa quem o é.
 
 # `Instalando e rodando o projeto`
 Fazer o clone do projeto:
@@ -51,11 +50,15 @@ Rodar o projeto:
 Olavo Marques do Nascimento; Márleo Piber da Rosa; Evandro Paulo Folletto.
 
 # `Imagens`
-<img src="./src/assets/img/readme/site1.png"/>
-<img src="./src/assets/img/readme/site2.png"/>
-<img src="./src/assets/img/readme/site3.png"/>
-<img src="./src/assets/img/readme/site4.png"/>
-<img src="./src/assets/img/readme/site5.png"/>
-<img src="./src/assets/img/readme/site6.png"/>
-<img src="./src/assets/img/readme/site7.png"/>
-<img src="./src/assets/img/readme/site8.png"/>
+### Página Home
+<img src="./src/assets/img_readme/site1.png"/>
+### Página Home
+<img src="./src/assets/img_readme/site2.png"/>
+### Página Detalhe
+<img src="./src/assets/img_readme/site3.png"/>
+### Página Pokédex
+<img src="./src/assets/img_readme/site4.png"/>
+### Página Batalha
+<img src="./src/assets/img_readme/site5.png"/>
+### Página Batalha
+<img src="./src/assets/img_readme/site6.png"/>

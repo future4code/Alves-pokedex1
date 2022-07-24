@@ -63,9 +63,9 @@ export default function Batalha() {
     somarAtributosP1();
     somarAtributosP2();
     if (statsP1 > statsP2) {
-      setMsgVencedor(`O pokemon ${pokemon1.nome} é o vencedor!`);
+      setMsgVencedor(`O Pokémon ${pokemon1.nome} é o vencedor!`);
     } else if (statsP1 < statsP2) {
-      setMsgVencedor(`O pokemon ${pokemon2.nome} é o vencedor!`);
+      setMsgVencedor(`O Pokémon ${pokemon2.nome} é o vencedor!`);
     } else {
       setMsgVencedor("Houve um empate!");
     }
