@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Geral = styled.div`
   display: grid;
-  grid-template-rows: 160px 1fr;
+  grid-template-rows: 160px 1fr 50px;
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
@@ -89,7 +89,7 @@ export const Grid = styled.div`
   }
 `
 
-export const BotoesPaginacao = styled.div`
+export const Paginacao = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;

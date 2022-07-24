@@ -1,11 +1,12 @@
 import { useState, useEffect, useContext } from "react";
-import * as s from './styled-homePage';
 import axios from 'axios';
-import Card from './../../components/cardPokemon/CardPokemon';
 import { useNavigate } from "react-router-dom";
+import * as s from './styled-homePage';
+import Card from './../../components/cardPokemon/CardPokemon';
+import Paginacao from './../../components/paginacao/Paginacao';
 import { goToPokedexPage } from "./../../routes/coordinator.js";
-import img_titulo from './../../assets/img/titulo.png';
 import { GlobalContext } from "../../components/global/GlobalContext";
+import img_titulo from './../../assets/img/titulo.png';
 
 export default function HomePage() {
   const { listaCapturados, setListaCapturados } = useContext(GlobalContext);
@@ -97,12 +98,9 @@ export default function HomePage() {
     }
   }
 
-  const MAX_ITEMS = 9;
-  const MAX_LEFT = (MAX_ITEMS - 1) / 2;
-  const PRIMEIRO = Math.max(paginaAtual - MAX_LEFT, 1)
-
   return (
     <s.Geral>
+
       <s.Header>
         <s.LadoEsquerdo>
           <s.BotaoPokedex onClick={() => goToPokedexPage(navigate)}>Pokédex</s.BotaoPokedex>
@@ -133,17 +131,13 @@ export default function HomePage() {
             })
         }
       </s.Main>
-        <s.BotoesPaginacao>
-          <s.BotaoAnterior disabled={paginaAtual === 1 ? true : false} onClick={() => mudaPaginaAtual(paginaAtual - 1)}>Anterior</s.BotaoAnterior>
-          {
-            Array.from({ length: MAX_ITEMS }, (_, i) => {
-              return (
-                <s.BotaoPagina paginaAtual={paginaAtual} value={i + PRIMEIRO} onClick={() => mudaPaginaAtual(i + PRIMEIRO)}>{i + PRIMEIRO}</s.BotaoPagina>
-              )
-            })
-          }
-          <s.BotaoUltimo disabled={paginaAtual === pages ? true : false} onClick={() => mudaPaginaAtual(paginaAtual + 1)}>Próximo</s.BotaoUltimo>
-        </s.BotoesPaginacao>
+
+      
+      <Paginacao 
+          paginaAtual={paginaAtual}
+          mudaPaginaAtual={mudaPaginaAtual}
+          pages={pages}
+      />
 
     </s.Geral>
   );
