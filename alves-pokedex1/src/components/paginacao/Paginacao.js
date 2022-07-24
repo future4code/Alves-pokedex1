@@ -12,7 +12,7 @@ export default function Paginacao(props) {
       {
         Array.from({ length: MAX_ITEMS }, (_, i) => {
           return (
-            <s.BotaoPagina paginaAtual={props.paginaAtual} value={i + PRIMEIRO} onClick={() => props.mudaPaginaAtual(i + PRIMEIRO)}>{i + PRIMEIRO}</s.BotaoPagina>
+            <s.BotaoPagina paginaAtual={props.paginaAtual} value={i + PRIMEIRO} onClick={() => props.mudaPaginaAtual(i + PRIMEIRO)} key={i}>{i + PRIMEIRO}</s.BotaoPagina>
           )
         })
       }

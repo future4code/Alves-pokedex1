@@ -1,15 +1,35 @@
 import styled from "styled-components";
+import img_fundo from "./../../assets/imagens-card/fundo.png";
 
 export const Card = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: #729F92;
+  background-color: ${props => 
+    props.tipo === 'grass' ? 
+    "#729F92" 
+    :
+    props.tipo === 'fire' ? 
+    "#EAAB7D"
+    :
+    props.tipo === 'water' ? 
+    "#71C3FF"
+    :
+    props.tipo === 'bug' ? 
+    "#76A866"
+    :
+    props.tipo === 'normal' ? 
+    "#BF9762"
+    :
+    "#729F92"};
+  background-image: url(${img_fundo});
+  background-size: 290px;
+  background-position: right;
+  background-repeat: no-repeat;
   margin: 30px;
   width: 440px;
   height: 210px;
   left: 0px;
   top: 0px;
-  background: #729F92;
   border-radius: 12px;
   box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.19);
   @media screen and (max-device-width : 480px){

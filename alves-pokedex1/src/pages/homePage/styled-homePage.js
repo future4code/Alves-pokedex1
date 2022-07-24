@@ -5,13 +5,12 @@ export const Geral = styled.div`
   grid-template-rows: 160px 1fr 50px;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   box-sizing: border-box;
 `
 
 export const Main = styled.div`
-  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   background-color: #5E5E5E;
   justify-content: center; 
@@ -22,7 +21,7 @@ export const Main = styled.div`
 
 export const Header = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   @media screen and (max-device-width : 480px){
@@ -31,8 +30,9 @@ export const Header = styled.div`
   }
 `
 export const BotaoHome = styled.div`
-  width: 100px;
-  height: 54px;
+  width: 287px;
+  height: 74px;
+  margin: 0 0 0 30px;
   color: #FFFFFF;
   @media screen and (max-device-width : 480px){
     width: 80vw;
@@ -53,7 +53,7 @@ export const BotaoPokedex = styled.div`
   display:flex;  
   justify-content: center;
   align-items: center;
-  margin: 0 0 0 30px;
+  margin: 0 30px 0 0;
   width: 287px;
   height: 74px;
   color:#fff;
@@ -78,7 +78,6 @@ export const BotaoPokedex = styled.div`
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
   @media screen and (max-device-width : 480px){
-    margin: 0;
     width: 150px;
     height: 30px;
   } 
