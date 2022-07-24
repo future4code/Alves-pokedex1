@@ -15,21 +15,21 @@ export const Card = styled.div`
   @media screen and (max-device-width : 480px){
     max-width: 100vw;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
   }
 `
 export const Imagem = styled.img`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 193px;
-  max-width: 200px;
-  left: 274px;
-  top: 295px;
-  margin-bottom: 10px;
-
+  margin-bottom: 10px; 
+  max-width: 100%;
+  width: 200px;
+  height: 220px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  @media screen and (max-device-width : 480px){
+    width: 200px;
+    height: 200px
+  }
 
 `
 export const ID = styled.div`
@@ -40,7 +40,9 @@ font-size: 16px;
 margin-left: 10px;
 font-style: normal;
 font-weight: 700;
-margin-top: 10px;
+margin-top: 10px;@media screen and (max-device-width : 480px){
+  font-size: 12px;
+  }
 `
 
 export const Nome = styled.div`
@@ -51,6 +53,9 @@ font-size: 32px;
 margin-left: 10px;
 font-style: normal;
 font-weight: 700;
+@media screen and (max-device-width : 480px){
+  font-size: 16px;
+  }
 `
 export const Tipos = styled.div`
   display: flex;
@@ -80,7 +85,10 @@ export const BotaoExcluir = styled.div`
   transform: scale(1);
   background-position: 500px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
+  }
+  @media screen and (max-device-width : 480px){
+    width: 100px;
+  }
 `
 export const BotaoDetalhes = styled.div`
   display: flex;
@@ -103,7 +111,10 @@ export const BotaoDetalhes = styled.div`
   transform: scale(1);
   background-position: 500px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
+  }
+  @media screen and (max-device-width : 480px){
+  width: 100px;
+  }
 `
 export const LadoEsquerdo = styled.div`
   display: flex;
@@ -116,5 +127,8 @@ export const LadoDireito = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   margin-bottom: 10px;
-  align-items: center;
+  align-items: center;  @media screen and (max-device-width : 480px){
+    width: 100px;
+    margin-right: 10px;
+  }
 `

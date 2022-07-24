@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const MensagemVazio = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+`
+
+export const TextoVazio = styled.h1`
+  text-align: center;
+`
 export const Geral = styled.div`
   display: grid;
   grid-template-rows: 160px 1fr;
@@ -14,16 +24,27 @@ export const Header = styled.div`
   justify-content: space-around;
   align-items: center;
   background-color: white;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
   `
 
 export const ImagemTitulo = styled.img`
   width: 307px;
-  height: 113px;
+  height: 113px;  
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 207px;
+    height: 76x;
+  }
   `
 
 export const BotaoHome = styled.div`
   width: 287px;
   height: 74px;
+  margin: 0 0 0 30px;
   display:flex;  
   justify-content: center;
   color:#fff;
@@ -52,7 +73,9 @@ export const BotaoHome = styled.div`
   background-position: 500px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-
+@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    margin: 10px 0 10px 0;
+  }
 `
 
 export const BotaoCriarBatalha = styled.div`
@@ -86,7 +109,9 @@ export const BotaoCriarBatalha = styled.div`
   background-position: 500px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-
+@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    margin: 10px 0 10px 0;
+  }
 `
 
 export const Main = styled.div`
@@ -95,7 +120,10 @@ export const Main = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #5E5E5E;
-  justify-content: center;
+  justify-content: center; 
+  @media screen and (max-device-width : 480px){
+    width: 100vw;
+    }
   `
 
 export const Grid = styled.div`
@@ -110,6 +138,7 @@ export const Grid = styled.div`
     grid-template-columns: 1fr;
     row-gap: 0;
     margin: 0;
+    width: 98vw;
   }
   
 `

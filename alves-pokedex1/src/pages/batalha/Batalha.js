@@ -226,7 +226,7 @@ export default function Batalha() {
             :
             <s.MensagemVazio>
               <s.TextoVazio>
-                Você precisa adicionar pokemons a sua pokedex!
+                Você precisa adicionar Pokémons a sua Pokédex!
               </s.TextoVazio>
             </s.MensagemVazio>
         }

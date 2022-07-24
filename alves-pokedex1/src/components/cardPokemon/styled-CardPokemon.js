@@ -66,7 +66,6 @@ export const ID = styled.div`
     font-size: 12px;
     }
 `
-
 export const Nome = styled.div`
   line-height: 16px;
   font-family: sans-serif;
@@ -79,16 +78,13 @@ export const Nome = styled.div`
     font-size: 16px;
     }
 `
-
 export const Tipos = styled.div`
   display: flex;
 `
-
 export const Tipoi = styled.div`
   display: flex;
   margin: 20px;
 `
-
 export const BotaoCapturar = styled.div`
   display: flex;
   flex-direction: row;
