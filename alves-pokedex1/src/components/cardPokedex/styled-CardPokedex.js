@@ -18,6 +18,7 @@ export const Card = styled.div`
     width: 100%;
   }
 `
+
 export const Imagem = styled.img`
   margin-bottom: 10px; 
   max-width: 100%;
@@ -32,6 +33,7 @@ export const Imagem = styled.img`
   }
 
 `
+
 export const ID = styled.div`
 line-height: 16px;
 font-family: sans-serif;
@@ -57,13 +59,16 @@ font-weight: 700;
   font-size: 16px;
   }
 `
+
 export const Tipos = styled.div`
   display: flex;
 `
+
 export const Tipoi = styled.div`
   display: flex;
   margin: 20px;
 `
+
 export const BotaoExcluir = styled.div`
   display: flex;
   flex-direction: row;
@@ -90,6 +95,7 @@ export const BotaoExcluir = styled.div`
     width: 100px;
   }
 `
+
 export const BotaoDetalhes = styled.div`
   display: flex;
   flex-direction: row;
@@ -116,12 +122,14 @@ export const BotaoDetalhes = styled.div`
   width: 100px;
   }
 `
+
 export const LadoEsquerdo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0;
 `
+
 export const LadoDireito = styled.div`
   display: flex;
   flex-direction: column;

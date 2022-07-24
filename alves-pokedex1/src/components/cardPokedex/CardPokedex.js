@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { goDetailsPage } from "./../../routes/coordinator.js";
 import { CorCardTipo } from '../corCardTipo/CorCardTipo';
 
-
 export default function CardPokemon(props) {
   const navigate = useNavigate();
 

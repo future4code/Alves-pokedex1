@@ -1,5 +1,4 @@
 import React from 'react'
-// import { useNavigate } from "react-router-dom";
 import imgErro from "../../assets/img/imgError.jpg"
 import { FotoErro, Main } from './ErrorPageStyled';
 export const ErrorPage = () => {
