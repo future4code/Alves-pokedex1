@@ -47,7 +47,6 @@ margin-top: 10px;
   font-size: 12px;
   }
 `
-
 export const Nome = styled.div`
 line-height: 16px;
 font-family: sans-serif;
@@ -60,17 +59,14 @@ font-weight: 700;
   font-size: 16px;
   }
 `
-
 export const Tipos = styled.div`
   display: flex;
   
 `
-
 export const Tipoi = styled.div`
   display: flex;
   margin: 20px;
 `
-
 export const BotaoCapturar = styled.div`
 display: flex;
   flex-direction: row;
