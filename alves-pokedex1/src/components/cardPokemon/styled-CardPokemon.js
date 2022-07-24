@@ -17,10 +17,10 @@ export const Card = styled.div`
     display: flex;
     width: 100%;
   }
-  `
+`
 
 export const Imagem = styled.img`
-  margin-bottom: 10px; 
+  margin: 0 10px 10px 0; 
   max-width: 100%;
   width: 200px;
   height: 220px;
@@ -33,37 +33,35 @@ export const Imagem = styled.img`
   }
 `
 
-
 export const ID = styled.div`
-line-height: 16px;
-font-family: sans-serif;
-color: rgba(255, 255, 255, 0.9);
-font-size: 16px;
-margin-left: 10px;
-font-style: normal;
-font-weight: 700;
-margin-top: 10px;
-@media screen and (max-device-width : 480px){
-  font-size: 12px;
-  }
+  line-height: 16px;
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin-left: 10px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 10px;
+  @media screen and (max-device-width : 480px){
+    font-size: 12px;
+    }
 `
 
 export const Nome = styled.div`
-line-height: 16px;
-font-family: sans-serif;
-color: rgba(255, 255, 255, 0.9);
-font-size: 32px;
-margin-left: 10px;
-font-style: normal;
-font-weight: 700;
-@media screen and (max-device-width : 480px){
-  font-size: 16px;
-  }
+  line-height: 16px;
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 32px;
+  margin-left: 10px;
+  font-style: normal;
+  font-weight: 700;
+  @media screen and (max-device-width : 480px){
+    font-size: 16px;
+    }
 `
 
 export const Tipos = styled.div`
   display: flex;
-  
 `
 
 export const Tipoi = styled.div`
@@ -72,7 +70,7 @@ export const Tipoi = styled.div`
 `
 
 export const BotaoCapturar = styled.div`
-display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   justify-content: center;
@@ -82,18 +80,17 @@ display: flex;
   background: #FF6262;
   border-radius: 8px;
   cursor: pointer;
-
   :hover {
-  transform: scale(1.1);
-  background-position: -60px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+    transform: scale(1.1);
+    background-position: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
   :active {
-  transform: scale(1);
-  background-position: 500px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-@media screen and (max-device-width : 480px){
+    transform: scale(1);
+    background-position: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  @media screen and (max-device-width : 480px){
     width: 100px;
   }
 `
@@ -111,16 +108,16 @@ export const BotaoDetalhes = styled.div`
   margin: 10px;
   cursor: pointer;
   :hover {
-  transform: scale(1.1);
-  background-position: -60px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
+    transform: scale(1.1);
+    background-position: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
   :active {
-  transform: scale(1);
-  background-position: 500px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-@media screen and (max-device-width : 480px){
+    transform: scale(1);
+    background-position: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  @media screen and (max-device-width : 480px){
     width: 100px;
   }
 `
@@ -129,7 +126,7 @@ export const LadoEsquerdo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  `
+`
 
 export const LadoDireito = styled.div`
   display: flex;

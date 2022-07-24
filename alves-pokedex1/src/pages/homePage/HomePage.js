@@ -129,7 +129,6 @@ export default function HomePage() {
         }
       </s.Main>
 
-
       <Paginacao
         paginaAtual={paginaAtual}
         mudaPaginaAtual={mudaPaginaAtual}
