@@ -9,7 +9,7 @@ import Card from './../../components/cardPokedex/CardPokedex';
 export default function PokedexPage() {
   const { setListaCapturados } = useContext(GlobalContext);
   const navigate = useNavigate();
-  let listaLS = 0;
+  let listaLS = [];
   listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
 
   const excluirPokemon = (id) => {
