@@ -14,13 +14,11 @@ export default function HomePage() {
   const navigate = useNavigate();
   const [list, setList] = useState([]);
   const [list2, setList2] = useState([]);
-  // const [listaDetalhes, setListaDetalhes] = useState([]);
-  // const [listaCapturados, setListaCapturados] = useState([])
   const [paginaAtual, setPaginaAtual] = useState(1);
 
   let listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
 
-  let pages = Math.ceil(list2.length / 20);  //VER O VALOR DE 1154 ------------------------------
+  let pages = Math.ceil(list2.length / 20);
   const mudaPaginaAtual = (pagina) => {
     setPaginaAtual(pagina);
   }
@@ -69,7 +67,6 @@ export default function HomePage() {
             detalhesPokemon.push(res.data);
             if (detalhesPokemon.length === 20) {
               setListaDetalhes(detalhesPokemon);
-
             }
           })
           .catch(error => {

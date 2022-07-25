@@ -31,7 +31,6 @@ export const BotaoHome = styled.div`
   height: 74px;
   margin: 0 30px 0 0;
   color: #FFFFFF;
-  
 `
 
 export const ImagemTitulo = styled.img`
@@ -55,23 +54,19 @@ export const BotaoVoltar = styled.div`
   border-radius:6px;
   background-color:#33A4F5;
   transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
-  background-size:contain;
-  background-position: -250px center;
-  background-repeat: no-repeat;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
-
-:hover {
-  transform: scale(1.1);
-  background-position: -60px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-:active {
-  transform: scale(1);
-  background-position: 500px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+  :hover {
+    transform: scale(1.1);
+    background-position: -60px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  :active {
+    transform: scale(1);
+    background-position: 500px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
     width: 150px;
     height: 30px;
     margin: 5px 0 0 0;
@@ -97,10 +92,8 @@ export const Coluna1 = styled.div`
   margin: 20px;
   border-radius: 20px;
   width: 30%;
-  /* background-color: lightgreen; */
   background-color: #FFE53B;
   background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
-
   @media screen and (min-device-width : 320px) and (max-device-width : 480px){
     width: 95vw;
     display: flex;
@@ -108,7 +101,6 @@ export const Coluna1 = styled.div`
     align-items: center;
     height: 100vw;
   }
-  
 `
 
 export const Coluna2 = styled.div`
@@ -121,7 +113,6 @@ export const Coluna2 = styled.div`
   width: 30%;
   @media screen and (min-device-width : 320px) and (max-device-width : 480px){
     width: 50vh;
-    /* height: 50px; */
     display: flex;
     flex-direction: column;
   }
@@ -133,7 +124,6 @@ export const ParteDeCima = styled.div`
   align-items: center;
   width: 100%;
   flex-basis: 50%;
-  
 `
 
 export const VS = styled.img`
@@ -207,7 +197,6 @@ export const Coluna3 = styled.div`
     width: 95vw;
     display: flex;
     flex-direction: column;
-    /* border: solid blue; */
     height: 100vw;
   }
 `
@@ -244,7 +233,6 @@ export const ContentImg = styled.div`
   height: 275px;
   @media screen and (min-device-width : 320px) and (max-device-width : 480px){
     width: 15vh;
-    
   }
 `
 

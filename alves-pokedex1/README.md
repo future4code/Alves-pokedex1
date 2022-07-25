@@ -21,7 +21,7 @@ Caso o usuário, no card, clicar em "Capturar!", este Pokémon automaticamente s
 </br>
 No canto superior direito da tela, existe uma botão chamado "Pokédex". Ao clicar neste o usuário é redirecionado para a página onde estão os cards de todos aqueles adicionados à Pokédex.
 </br>
-No canto superior direito da página Pokédex existe um botão chamado "Criar Batalha". Ao clicar neste botão o usuário é redirecionado para uma página onde ele pode selecionar dois Pokémons. As opções que aparecem nesta seleção são apenas os Pokémons que já estão adicionados à Pokédex. Ao selecionar os Pokémons, suas imagens são exibidas abaixo do nome e também um botão chamado "Lutar!", que, ao ser clicado exibe na tela os valores de "Base stats" de cada Pokémon, assim como a soma total destes. O Pokémon vencedor é aquele que possuir o maior valor total e uma mensagem na tela informa quem o é.
+No canto superior direito da página Pokédex existe um botão chamado "Criar Batalha". Ao clicar neste botão o usuário é redirecionado para uma página onde ele pode selecionar dois Pokémons. As opções que aparecem nesta seleção são apenas os Pokémons que já estão adicionados à Pokédex. Ao selecionar os Pokémons, suas imagens são exibidas abaixo do nome e também um botão chamado "Batalhar!", que, ao ser clicado exibe na tela os valores de "Base stats" de cada Pokémon, assim como a soma total destes. O Pokémon vencedor é aquele que possuir o maior valor total e uma mensagem na tela informa quem o é.
 
 # `Instalando e rodando o projeto`
 Fazer o clone do projeto:

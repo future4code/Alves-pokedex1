@@ -152,6 +152,7 @@ export const QuadradoCima = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
   width: 282px;
   height: 282px;
   border: none;
