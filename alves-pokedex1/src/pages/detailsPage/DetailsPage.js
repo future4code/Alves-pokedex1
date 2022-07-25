@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import * as s from './styled-detailsPage'
-import { goBack } from "./../../routes/coordinator.js";
+import { goBack, goToPokedexPage } from "./../../routes/coordinator.js";
 import img_titulo from './../../assets/img/titulo.png';
 import { useEffect, useState } from "react";
 import axios from 'axios';
@@ -23,7 +23,6 @@ export default function DetailsPage() {
         alert("Deu errado a requisição de pegar pokemons!");
       })
   }
-  
   useEffect(() => {
     getDetalhesPokemon();
   }, [])
@@ -47,6 +46,12 @@ export default function DetailsPage() {
     const novaLista = listaLS.filter((pokemon) => {
       return pokemon.id !== id
     })
+    if(novaLista.length === listaLS.length) {
+      alert(`O Pokémon selecionado não está na Pokédex, logo, não pode ser excluído`);
+    } else {
+      alert(`O Pokémon selecionado foi excluído da Pokédex`);
+      goToPokedexPage(navigate);
+    }
     localStorage.setItem('listaCapturados', JSON.stringify(novaLista))
   }
 

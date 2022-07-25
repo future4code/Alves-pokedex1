@@ -5,19 +5,19 @@ export const Card = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: ${props => 
-    props.tipo === 'grass' ? 
+    props.tipo === 'grass' ?
     "#729F92" 
     :
-    props.tipo === 'fire' ? 
+    props.tipo === 'fire' ?
     "#EAAB7D"
     :
-    props.tipo === 'water' ? 
+    props.tipo === 'water' ?
     "#71C3FF"
     :
-    props.tipo === 'bug' ? 
+    props.tipo === 'bug' ?
     "#76A866"
     :
-    props.tipo === 'normal' ? 
+    props.tipo === 'normal' ?
     "#BF9762"
     :
     "#729F92"};
@@ -64,7 +64,7 @@ export const ID = styled.div`
   margin-top: 10px;
   @media screen and (max-device-width : 480px){
     font-size: 12px;
-    }
+  }
 `
 
 export const Nome = styled.div`
@@ -77,7 +77,7 @@ export const Nome = styled.div`
   font-weight: 700;
   @media screen and (max-device-width : 480px){
     font-size: 16px;
-    }
+  }
 `
 
 export const Tipos = styled.div`

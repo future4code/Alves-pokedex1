@@ -75,7 +75,7 @@ export default function Batalha() {
     setResumoP1(
       pokemon1.stats.map(pokemon => {
         return(
-          <s.AtributosInfo>
+          <s.AtributosInfo key={pokemon.id}>
             <s.AtributoNome>
               {pokemon.stat.name}
             </s.AtributoNome>
@@ -92,7 +92,7 @@ export default function Batalha() {
     setResumoP2(
       pokemon2.stats.map(pokemon => {
         return(
-          <s.AtributosInfo>
+          <s.AtributosInfo key={pokemon.id}>
             <s.AtributoNome>
               {pokemon.stat.name}
             </s.AtributoNome>

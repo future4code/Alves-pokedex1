@@ -29,7 +29,6 @@ export default function PokedexPage() {
       </s.Header>
 
       <s.Main>
-
         {
           listaLS.length === 0 ?
             <s.MensagemVazio>
@@ -51,7 +50,6 @@ export default function PokedexPage() {
             })
         }
       </s.Main>
-
     </s.Geral>
   );
 }; 
