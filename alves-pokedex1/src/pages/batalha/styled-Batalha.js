@@ -7,6 +7,9 @@ export const Geral = styled.div`
   height: 100vh;
   box-sizing: border-box;
   background-color: #5e5e5e;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    background-color: white;
+  }
 `
 
 export const Header = styled.div`
@@ -14,6 +17,13 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: white;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
 `
 
 export const BotaoHome = styled.div`
@@ -21,6 +31,7 @@ export const BotaoHome = styled.div`
   height: 74px;
   margin: 0 30px 0 0;
   color: #FFFFFF;
+  
 `
 
 export const ImagemTitulo = styled.img`
@@ -60,12 +71,22 @@ export const BotaoVoltar = styled.div`
   background-position: 500px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 150px;
+    height: 30px;
+    margin: 5px 0 0 0;
+  }
 `
 
 export const Main = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100vw;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const Coluna1 = styled.div`
@@ -80,6 +101,14 @@ export const Coluna1 = styled.div`
   background-color: #FFE53B;
   background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
 
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vw;
+  }
+  
 `
 
 export const Coluna2 = styled.div`
@@ -90,6 +119,12 @@ export const Coluna2 = styled.div`
   border-radius: 20px;
   margin: 20px;
   width: 30%;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 50vh;
+    /* height: 50px; */
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const ParteDeCima = styled.div`
@@ -98,10 +133,15 @@ export const ParteDeCima = styled.div`
   align-items: center;
   width: 100%;
   flex-basis: 50%;
+  
 `
 
 export const VS = styled.img`
   width: 400px;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 30vh;
+    padding: 10px;
+  }
 `
 
 export const ParteDeBaixo = styled.div`
@@ -128,6 +168,9 @@ export const BotaoLutar = styled.button`
     transition: .4s;
     color: #ddd9ce;
   }
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 30vw;
+  }
 `
 
 export const Resultado = styled.div`
@@ -142,6 +185,12 @@ export const Resultado = styled.div`
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   background-color: #fac705;
   background-image: linear-gradient(90deg, #FF2525 0%, #21D4FD 80%);
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 80vw;
+    height: 15vh;
+    margin: 5px;
+    text-align: center;
+  }
 `
 
 export const Coluna3 = styled.div`
@@ -154,6 +203,13 @@ export const Coluna3 = styled.div`
   width: 30%;
   background-color: #21D4FD;
   background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    /* border: solid blue; */
+    height: 100vw;
+  }
 `
 
 // ESTILIZAÇÃO DAS COLUNAS 1 E 3
@@ -165,6 +221,10 @@ export const Select = styled.select`
   font-size: 18px;
   border-radius: 5px;
   background: #e7e4f3;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 50vh;
+    margin: 5px 0 0 0;
+  }
 `
 
 export const MensagemVazio = styled.div`
@@ -182,6 +242,10 @@ export const ContentImg = styled.div`
   margin: 20px 0 0 0;
   width: 275px;
   height: 275px;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 15vh;
+    
+  }
 `
 
 export const Image = styled.img`
@@ -192,6 +256,10 @@ export const Image = styled.img`
   max-height: 100%;
   object-fit: contain;
   /* object-fit: cover; */
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 80px;
+    height: 100px;
+  }
 `
 
 export const AtributosInfo = styled.div`
@@ -205,11 +273,21 @@ export const AtributosInfo = styled.div`
   border: none;
   color: #3d64b8;
   background: #fac705;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 70vw;
+    height: 20px;
+    font-size: 12px;
+    margin: 5px 0 5px 38px;
+  }
 `
 
 export const Resumo = styled.div`
   margin: 20px;
   width: 60%;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 50vh;
+    margin: 0;
+  }
 `
 
 export const AtributoNome = styled.div`
@@ -232,6 +310,12 @@ export const Total = styled.div`
   border: none;
   color: #fac705;
   background: #3d64b8;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 80px;
+    height: 20px;
+    font-size: 12px;
+    margin: 5px 0 5px 125px;
+  }
 `
 
 export const TotalTexto = styled.div`
