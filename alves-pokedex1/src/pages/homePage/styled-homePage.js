@@ -43,9 +43,7 @@ export const ImagemTitulo = styled.img`
   width: 307px;
   height: 113px;
   @media screen and (max-device-width : 480px){
-    margin: 0;
-    width: 70vw;
-    height: 60px;
+    margin-top: 5px;
   }
 `
 
@@ -80,6 +78,7 @@ export const BotaoPokedex = styled.div`
   @media screen and (max-device-width : 480px){
     width: 150px;
     height: 30px;
+    margin: 10px 0 10px 0;
   } 
 `
 
