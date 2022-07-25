@@ -9,7 +9,8 @@ import Card from './../../components/cardPokedex/CardPokedex';
 export default function PokedexPage() {
   const { setListaCapturados } = useContext(GlobalContext);
   const navigate = useNavigate();
-  let listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
+  let listaLS = 0;
+  listaLS = JSON.parse(localStorage.getItem('listaCapturados'));
 
   const excluirPokemon = (id) => {
     const novaLista = listaLS.filter((pokemon) => {
@@ -30,7 +31,7 @@ export default function PokedexPage() {
 
       <s.Main>
         {
-          listaLS.length === 0 ?
+          listaLS.length === 0 || listaLS.null ?
             <s.MensagemVazio>
               <s.TextoVazio>
                 Sua lista Pokédex está vazia!
