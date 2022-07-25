@@ -31,7 +31,7 @@ export default function PokedexPage() {
 
       <s.Main>
         {
-          listaLS.null ?
+          listaLS === null ?
             <s.MensagemVazio>
               <s.TextoVazio>
                 Sua lista Pokédex está vazia!
